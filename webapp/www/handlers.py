@@ -1,8 +1,7 @@
-import re, time, json, logging, hashlib, base64, asyncio
+from www.coroweb1 import get
 
-from coroweb1 import get, post
+from www.models import User
 
-from models import User, Comment, Blog, next_id
 
 @get('/')
 async def index(request):

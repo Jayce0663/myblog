@@ -1,15 +1,13 @@
 import logging;
 
-from models import User
-
 logging.basicConfig(level=logging.INFO)
 
 import asyncio, os, json, time
 from datetime import datetime
 from aiohttp import web
 from jinja2 import Environment, FileSystemLoader
-import orm
-from coroweb import add_route, add_static, add_routes, get
+from www import orm
+from www.coroweb import add_static, add_routes
 
 
 def init_jinja2(app, **kw):
